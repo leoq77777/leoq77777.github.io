@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yutong Qin</title>
+  <meta name="description" content="Yutong Qin — Columbia MSCS. Systems, low-latency C++, LLM inference, and quantitative trading.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="canvas" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="masthead">
+      <p class="eyebrow">New York &middot; MMXXVI</p>
+      <h1>Yutong Qin</h1>
+      <p class="subtitle">M.S. Computer Science, Columbia University</p>
+      <div class="rule"><span>&#10086;</span></div>
+      <nav class="links">
+        <a href="https://github.com/leoq77777">GitHub</a>
+        <span class="dot">&middot;</span>
+        <a href="mailto:leoqin77777@gmail.com">Email</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2><span class="num">I.</span> About</h2>
+      <p class="lead">
+        I build systems where performance is something you can measure &mdash;
+        recommendation serving at production scale, low-latency C++ for markets,
+        and inference engines for large language models.
+      </p>
+      <p>
+        I studied economics at Nanjing University before moving into computer science,
+        and I am now a graduate student at Columbia. Between the two I spent
+        an internship on Kuaishou&rsquo;s recommendation engine team in Beijing.
+        These days I am most interested in quantitative development, ML systems,
+        and the place where the two meet.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2><span class="num">II.</span> Experience</h2>
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Kuaishou Technology</h3>
+          <span class="when">Jul 2025 &ndash; Feb 2026</span>
+        </div>
+        <p class="role">Recommendation System Intern, Algorithm Engine Team &middot; Beijing</p>
+        <p>
+          Worked on model serving for a recommendation platform with 300M+ daily users:
+          integrating and adding fallback for OneRec generative recommendation,
+          redesigning cold-start for overseas markets, and investigating a Black Friday
+          out-of-memory outage through allocation-log analysis. Contributed to roughly
+          12% CPU reduction and 10&ndash;15% latency improvements on serving paths.
+        </p>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2><span class="num">III.</span> Selected Work</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=FastLOB">FastLOB</a></h3>
+          <span class="when">C++20</span>
+        </div>
+        <p>
+          A market-by-order limit order book engine built around fixed-size memory pools,
+          intrusive FIFO queues and open-addressing indexes. Add/cancel paths went from
+          47.5&nbsp;ns to 9.8&nbsp;ns per operation on Apple M5, with zero mismatches across
+          50,000 replayed events.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=nano-vllm">nano-vLLM-MLX</a></h3>
+          <span class="when">Python &middot; MLX</span>
+        </div>
+        <p>
+          An LLM inference engine for Apple Silicon with continuous batching, paged attention,
+          chunked prefill, prefix caching and preemption. Benchmarked on Qwen3-0.6B for
+          time-to-first-token and throughput under concurrent load.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=miniRay">MiniRay</a></h3>
+          <span class="when">C++</span>
+        </div>
+        <p>
+          A small distributed task runtime inspired by Ray: task scheduling, RPC,
+          resource management, heartbeats, retries and failure recovery.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=server">Tiny Web Server</a></h3>
+          <span class="when">C++</span>
+        </div>
+        <p>
+          An event-driven HTTP/1.1 server on the Reactor pattern with epoll, non-blocking
+          sockets, a thread pool and asynchronous logging. About 72.6K requests/sec with
+          10,500 concurrent clients and zero failures.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=ZQR">ZQR</a></h3>
+          <span class="when">Python</span>
+        </div>
+        <p>
+          An agent-based quantitative research platform, which I use to explore how
+          language-model agents can search for and test trading ideas.
+        </p>
+      </article>
+    </section>
+
+    <section id="interests">
+      <h2><span class="num">IV.</span> Interests</h2>
+      <dl class="interests">
+        <div><dt>Film</dt><dd>Arthouse and repertory cinema, from the Roxy to MoMA.</dd></div>
+        <div><dt>Markets</dt><dd>US and Hong Kong equities, options, futures and gold.</dd></div>
+        <div><dt>Basketball</dt><dd>Captain of the Nanjing University business school team.</dd></div>
+        <div><dt>Fitness</dt><dd>Training regularly.</dd></div>
+        <div><dt>Valorant</dt><dd>Former captain of the Nanjing University team.</dd></div>
+      </dl>
+    </section>
+
+    <footer>
+      <div class="rule"><span>&#10086;</span></div>
+      <p>&copy; 2026 Yutong Qin</p>
+      <p class="credit">Background: Henri Fantin-Latour, <em>Still Life with Roses and Fruit</em>, 1863.
+        The Metropolitan Museum of Art, public domain.</p>
+    </footer>
+  </main>
+</body>
+</html>
