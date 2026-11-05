@@ -7,139 +7,202 @@
   <meta name="description" content="Yutong Qin — Columbia MSCS. Systems, low-latency C++, LLM inference, and quantitative trading.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="canvas" aria-hidden="true"></div>
 
-  <main class="page">
-    <header class="masthead">
-      <p class="eyebrow">New York &middot; MMXXVI</p>
-      <h1>Yutong Qin</h1>
-      <p class="subtitle">M.S. Computer Science, Columbia University</p>
-      <div class="rule"><span>&#10086;</span></div>
-      <nav class="links">
+  <!-- ─────────────── Hero ─────────────── -->
+  <header class="hero">
+    <nav class="topnav">
+      <span class="mark">Y. Q.</span>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#interests">Interests</a>
+      </div>
+    </nav>
+
+    <div class="hero-text">
+      <p class="label">New York &middot; Columbia University</p>
+      <h1>Yutong<br><em>Qin</em></h1>
+      <div class="hero-rule"></div>
+      <p class="tagline">Systems, low-latency C++,<br>and the machinery behind language models.</p>
+      <p class="hero-links">
         <a href="https://github.com/leoq77777">GitHub</a>
-        <span class="dot">&middot;</span>
+        <span>&middot;</span>
         <a href="mailto:leoqin77777@gmail.com">Email</a>
-      </nav>
-    </header>
-
-    <section id="about">
-      <h2><span class="num">I.</span> About</h2>
-      <p class="lead">
-        I build systems where performance is something you can measure &mdash;
-        recommendation serving at production scale, low-latency C++ for markets,
-        and inference engines for large language models.
       </p>
-      <p>
-        I studied economics at Nanjing University before moving into computer science,
-        and I am now a graduate student at Columbia. Between the two I spent
-        an internship on Kuaishou&rsquo;s recommendation engine team in Beijing.
-        These days I am most interested in quantitative development, ML systems,
-        and the place where the two meet.
-      </p>
-    </section>
+    </div>
 
-    <section id="experience">
-      <h2><span class="num">II.</span> Experience</h2>
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Kuaishou Technology</h3>
-          <span class="when">Jul 2025 &ndash; Feb 2026</span>
-        </div>
-        <p class="role">Recommendation System Intern, Algorithm Engine Team &middot; Beijing</p>
-        <p>
-          Worked on model serving for a recommendation platform with 300M+ daily users:
-          integrating and adding fallback for OneRec generative recommendation,
-          redesigning cold-start for overseas markets, and investigating a Black Friday
-          out-of-memory outage through allocation-log analysis. Contributed to roughly
-          12% CPU reduction and 10&ndash;15% latency improvements on serving paths.
+    <p class="plaque">
+      Henri Fantin-Latour<br>
+      <em>Still Life with Roses and Fruit</em>, 1863<br>
+      The Metropolitan Museum of Art
+    </p>
+  </header>
+
+  <!-- ─────────────── About ─────────────── -->
+  <section id="about" class="band paper">
+    <div class="wrap split">
+      <div class="section-head">
+        <span class="numeral">I</span>
+        <h2>About</h2>
+      </div>
+      <div class="section-body">
+        <p class="lead">
+          I build systems where performance is something you can measure &mdash;
+          recommendation serving at production scale, low-latency C++ for markets,
+          and inference engines for large language models.
         </p>
-      </article>
-    </section>
+        <p>
+          I studied economics at Nanjing University before moving into computer science,
+          and I am now pursuing an M.S. at Columbia. In between, I spent an internship on
+          Kuaishou&rsquo;s recommendation engine team in Beijing. These days I am most
+          interested in quantitative development, ML systems, and the place where the two meet.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2><span class="num">III.</span> Selected Work</h2>
+  <!-- ─────────────── Figures (over the painting) ─────────────── -->
+  <section class="band dusk" aria-label="Selected figures">
+    <div class="wrap figures">
+      <div class="figure">
+        <span class="fig-num">300M+</span>
+        <span class="fig-label">daily users on the recommendation platform I worked on</span>
+      </div>
+      <div class="figure">
+        <span class="fig-num">9.8<small>ns</small></span>
+        <span class="fig-label">per order-book operation in FastLOB, down from 47.5</span>
+      </div>
+      <div class="figure">
+        <span class="fig-num">72.6K</span>
+        <span class="fig-label">requests per second from a hand-written C++ web server</span>
+      </div>
+    </div>
+  </section>
 
-      <article class="entry">
-        <div class="entry-head">
+  <!-- ─────────────── Work ─────────────── -->
+  <section id="work" class="band paper">
+    <div class="wrap">
+      <div class="section-head centered">
+        <span class="numeral">II</span>
+        <h2>Selected Work</h2>
+      </div>
+
+      <article class="feature">
+        <div class="feature-main">
+          <span class="idx">01</span>
+          <p class="kicker">C++20 &middot; Market data</p>
           <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=FastLOB">FastLOB</a></h3>
-          <span class="when">C++20</span>
+          <p>
+            A market-by-order limit order book engine built around fixed-size memory pools,
+            intrusive FIFO queues and open-addressing indexes, with optimized add and cancel
+            paths. Zero mismatches across 50,000 replayed events, and clean under sanitizers.
+          </p>
         </div>
-        <p>
-          A market-by-order limit order book engine built around fixed-size memory pools,
-          intrusive FIFO queues and open-addressing indexes. Add/cancel paths went from
-          47.5&nbsp;ns to 9.8&nbsp;ns per operation on Apple M5, with zero mismatches across
-          50,000 replayed events.
-        </p>
+        <div class="feature-aside">
+          <span class="from">47.5 ns</span>
+          <span class="arrow">&darr;</span>
+          <span class="to">9.8 ns</span>
+          <span class="per">per operation &middot; Apple M5</span>
+        </div>
       </article>
 
-      <article class="entry">
-        <div class="entry-head">
+      <div class="cards">
+        <article class="card">
+          <span class="idx">02</span>
+          <p class="kicker">Python &middot; MLX</p>
           <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=nano-vllm">nano-vLLM-MLX</a></h3>
-          <span class="when">Python &middot; MLX</span>
-        </div>
-        <p>
-          An LLM inference engine for Apple Silicon with continuous batching, paged attention,
-          chunked prefill, prefix caching and preemption. Benchmarked on Qwen3-0.6B for
-          time-to-first-token and throughput under concurrent load.
-        </p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
+          <p>An LLM inference engine for Apple Silicon: continuous batching, paged attention,
+            chunked prefill, prefix caching and preemption, benchmarked on Qwen3-0.6B.</p>
+        </article>
+        <article class="card">
+          <span class="idx">03</span>
+          <p class="kicker">C++ &middot; Distributed</p>
           <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=miniRay">MiniRay</a></h3>
-          <span class="when">C++</span>
-        </div>
-        <p>
-          A small distributed task runtime inspired by Ray: task scheduling, RPC,
-          resource management, heartbeats, retries and failure recovery.
-        </p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
+          <p>A small distributed task runtime inspired by Ray: scheduling, RPC, resource
+            management, heartbeats, retries and failure recovery.</p>
+        </article>
+        <article class="card">
+          <span class="idx">04</span>
+          <p class="kicker">C++ &middot; Networking</p>
           <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=server">Tiny Web Server</a></h3>
-          <span class="when">C++</span>
-        </div>
-        <p>
-          An event-driven HTTP/1.1 server on the Reactor pattern with epoll, non-blocking
-          sockets, a thread pool and asynchronous logging. About 72.6K requests/sec with
-          10,500 concurrent clients and zero failures.
-        </p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
+          <p>An event-driven HTTP/1.1 server on the Reactor pattern with epoll, non-blocking
+            sockets, a thread pool and asynchronous logging; 10,500 concurrent clients, zero failures.</p>
+        </article>
+        <article class="card">
+          <span class="idx">05</span>
+          <p class="kicker">Python &middot; Agents</p>
           <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=ZQR">ZQR</a></h3>
-          <span class="when">Python</span>
-        </div>
-        <p>
-          An agent-based quantitative research platform, which I use to explore how
-          language-model agents can search for and test trading ideas.
-        </p>
-      </article>
-    </section>
+          <p>An agent-based quantitative research platform for exploring how language-model
+            agents can search for and test trading ideas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <section id="interests">
-      <h2><span class="num">IV.</span> Interests</h2>
-      <dl class="interests">
-        <div><dt>Film</dt><dd>Arthouse and repertory cinema, from the Roxy to MoMA.</dd></div>
-        <div><dt>Markets</dt><dd>US and Hong Kong equities, options, futures and gold.</dd></div>
-        <div><dt>Basketball</dt><dd>Captain of the Nanjing University business school team.</dd></div>
-        <div><dt>Fitness</dt><dd>Training regularly.</dd></div>
-        <div><dt>Valorant</dt><dd>Former captain of the Nanjing University team.</dd></div>
-      </dl>
-    </section>
+  <!-- ─────────────── Experience ─────────────── -->
+  <section id="experience" class="band ivory">
+    <div class="wrap split">
+      <div class="section-head">
+        <span class="numeral">III</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="section-body">
+        <article class="post">
+          <p class="years">2025 &ndash; 2026</p>
+          <h3>Kuaishou Technology</h3>
+          <p class="role">Recommendation System Intern &middot; Algorithm Engine Team &middot; Beijing</p>
+          <p>
+            Model serving for a recommendation platform with 300M+ daily users. I worked on
+            integrating OneRec generative recommendation and its fallback path, redesigning
+            cold-start for overseas markets, and tracing a Black Friday out-of-memory outage
+            through allocation-log analysis.
+          </p>
+          <ul class="tags">
+            <li>~12% CPU reduction</li>
+            <li>10&ndash;15% lower latency</li>
+            <li>C++ &middot; gRPC &middot; Linux</li>
+          </ul>
+        </article>
+        <article class="post">
+          <p class="years">Education</p>
+          <h3>Columbia University</h3>
+          <p class="role">M.S. Computer Science &middot; New York</p>
+          <h3 class="second">Nanjing University</h3>
+          <p class="role">Economics &middot; Nanjing</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <div class="rule"><span>&#10086;</span></div>
-      <p>&copy; 2026 Yutong Qin</p>
-      <p class="credit">Background: Henri Fantin-Latour, <em>Still Life with Roses and Fruit</em>, 1863.
-        The Metropolitan Museum of Art, public domain.</p>
-    </footer>
-  </main>
+  <!-- ─────────────── Interests ─────────────── -->
+  <section id="interests" class="band paper">
+    <div class="wrap">
+      <div class="section-head centered">
+        <span class="numeral">IV</span>
+        <h2>Away from the Terminal</h2>
+      </div>
+      <div class="interests">
+        <div><span class="orn">&#10087;</span><h4>Film</h4><p>Arthouse and repertory cinema &mdash; the Roxy, MoMA.</p></div>
+        <div><span class="orn">&#10087;</span><h4>Markets</h4><p>US and Hong Kong equities, options, futures, gold.</p></div>
+        <div><span class="orn">&#10087;</span><h4>Basketball</h4><p>Captained the Nanjing University business school team.</p></div>
+        <div><span class="orn">&#10087;</span><h4>Fitness</h4><p>Training as a steady habit.</p></div>
+        <div><span class="orn">&#10087;</span><h4>Valorant</h4><p>Former captain of the Nanjing University team.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="band dusk footer">
+    <div class="wrap">
+      <p class="sign">Yutong Qin</p>
+      <p><a href="https://github.com/leoq77777">GitHub</a> &middot; <a href="mailto:leoqin77777@gmail.com">leoqin77777@gmail.com</a></p>
+      <p class="fine">&copy; 2026 &middot; Background: Henri Fantin-Latour, <em>Still Life with Roses and Fruit</em> (1863), The Met, public domain.</p>
+    </div>
+  </footer>
 </body>
 </html>
