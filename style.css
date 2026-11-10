@@ -309,6 +309,8 @@ h3 a:hover { color: var(--gold); }
 }
 .card:nth-child(odd) { border-right: 1px solid var(--hair); padding-left: 0.4rem; }
 .card:nth-child(even) { padding-right: 0.4rem; }
+.card:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: none; padding-right: 0.4rem; }
+.card:last-child:nth-child(odd) p:last-child { max-width: 44rem; }
 .card p:last-child { color: #3a302b; font-size: 1rem; }
 .feature-main p:last-child { font-size: 1.05rem; }
 
