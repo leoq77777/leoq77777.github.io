@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yutong Qin</title>
+  <meta name="description" content="Yutong Qin — M.S. Computer Science, Columbia University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#2a2320; --muted:#7a6d64; --claret:#6b1f2a; --gold:#a88a4e; --hair:#e4dacb; --bg:#faf6ef; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { font-size:19px; }
+    body {
+      background:var(--bg); color:var(--ink);
+      font-family:"EB Garamond", Garamond, "Times New Roman", serif;
+      line-height:1.65; font-variant-numeric:lining-nums;
+      -webkit-font-smoothing:antialiased;
+    }
+    main { max-width:36rem; margin:0 auto; padding:5.5rem 1.5rem 4rem; }
+    a { color:var(--claret); text-decoration:none; border-bottom:1px solid rgba(107,31,42,.25); }
+    a:hover { border-bottom-color:var(--claret); }
+
+    header { display:flex; align-items:center; gap:1.4rem; margin-bottom:3.2rem; }
+    header img { width:4.6rem; height:4.6rem; border-radius:50%; object-fit:cover; flex:none;
+                 box-shadow:0 0 0 1px var(--hair), 0 0 0 5px var(--bg), 0 0 0 6px rgba(168,138,78,.45); }
+    h1 { font-family:"Cormorant Garamond", serif; font-weight:500; font-size:2.3rem; line-height:1.1; color:var(--claret); }
+    .sub { color:var(--muted); font-style:italic; margin-top:.15rem; }
+
+    p + p { margin-top:.9rem; }
+    .links { margin-top:1.2rem; font-size:.95rem; }
+    .links a + a { margin-left:1.2rem; }
+
+    h2 {
+      font-size:.72rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase;
+      color:var(--gold); margin:3rem 0 1.1rem;
+    }
+
+    ul { list-style:none; }
+    li { display:grid; grid-template-columns:8.5rem 1fr; gap:1rem; padding:.55rem 0; border-top:1px solid var(--hair); }
+    li:last-child { border-bottom:1px solid var(--hair); }
+    .k { color:var(--muted); font-size:.92rem; padding-top:.08rem; }
+    .t { font-weight:500; }
+    .d { display:block; color:#4a403a; font-size:.95rem; }
+
+    footer { margin-top:3.5rem; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+
+    @media (max-width:560px) {
+      html { font-size:17px; }
+      main { padding-top:3rem; }
+      li { grid-template-columns:1fr; gap:0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="roses.jpg" alt="">
+      <div>
+        <h1>Yutong Qin</h1>
+        <p class="sub">M.S. Computer Science, Columbia University</p>
+      </div>
+    </header>
+
+    <p>
+      I work on systems where performance can be measured: recommendation serving,
+      low-latency C++, and LLM inference engines. I studied economics at Nanjing University
+      before moving into computer science, and I'm most interested in quantitative
+      development and ML systems.
+    </p>
+    <p class="links">
+      <a href="https://github.com/leoq77777">GitHub</a>
+      <a href="mailto:leoqin77777@gmail.com">Email</a>
+    </p>
+
+    <h2>Experience</h2>
+    <ul>
+      <li><span class="k">2025 – 2026</span>
+        <span><span class="t">Kuaishou Technology</span> · Beijing
+        <span class="d">Recommendation System Intern. Model serving for a platform with 300M+ daily users; OneRec integration, cold-start, outage analysis.</span></span></li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+      <li><span class="k">Columbia</span><span>M.S. Computer Science</span></li>
+      <li><span class="k">Nanjing University</span><span>Economics</span></li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><span class="k">C++20</span>
+        <span><a class="t" href="https://github.com/leoq77777?tab=repositories&amp;q=FastLOB">FastLOB</a>
+        <span class="d">Limit order book engine; 47.5 → 9.8 ns per operation.</span></span></li>
+      <li><span class="k">Python · MLX</span>
+        <span><a class="t" href="https://github.com/leoq77777?tab=repositories&amp;q=nano-vllm">nano-vLLM-MLX</a>
+        <span class="d">LLM inference with continuous batching and paged attention.</span></span></li>
+      <li><span class="k">C++</span>
+        <span><a class="t" href="https://github.com/leoq77777?tab=repositories&amp;q=miniRay">MiniRay</a>
+        <span class="d">Distributed task runtime inspired by Ray.</span></span></li>
+      <li><span class="k">C++</span>
+        <span><a class="t" href="https://github.com/leoq77777?tab=repositories&amp;q=server">Tiny Web Server</a>
+        <span class="d">Reactor/epoll HTTP server; ~72.6K requests/sec.</span></span></li>
+      <li><span class="k">Python</span>
+        <span><a class="t" href="https://github.com/leoq77777?tab=repositories&amp;q=ZQR">ZQR</a>
+        <span class="d">Agent-based quantitative research platform.</span></span></li>
+    </ul>
+
+    <h2>Interests</h2>
+    <p>Arthouse film, markets, basketball, fitness, and Valorant.</p>
+
+    <footer>
+      <span>© 2026 Yutong Qin</span>
+      <a href="../">Full version →</a>
+    </footer>
+  </main>
+</body>
+</html>
