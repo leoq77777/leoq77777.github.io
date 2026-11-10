@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <div class="canvas" aria-hidden="true"></div>
@@ -80,7 +80,7 @@
       </div>
       <div class="figure">
         <span class="fig-num">72.6K</span>
-        <span class="fig-label">requests per second from a hand-written C++ web server</span>
+        <span class="fig-label">requests per second from an event-driven C++ web server</span>
       </div>
     </div>
   </section>
@@ -97,7 +97,7 @@
         <div class="feature-main">
           <span class="idx">01</span>
           <p class="kicker">C++20 &middot; Market data</p>
-          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=FastLOB">FastLOB</a></h3>
+          <h3>FastLOB</h3>
           <p>
             A market-by-order limit order book engine built around fixed-size memory pools,
             intrusive FIFO queues and open-addressing indexes, with optimized add and cancel
@@ -116,30 +116,31 @@
         <article class="card">
           <span class="idx">02</span>
           <p class="kicker">Python &middot; MLX</p>
-          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=nano-vllm">nano-vLLM-MLX</a></h3>
-          <p>An LLM inference engine for Apple Silicon: continuous batching, paged attention,
-            chunked prefill, prefix caching and preemption, benchmarked on Qwen3-0.6B.</p>
+          <h3><a href="https://github.com/leoq77777/nano-vllm-mlx">nano-vLLM-MLX</a></h3>
+          <p>An MLX port of nano-vLLM for Apple Silicon, covering continuous batching, paged
+            attention, chunked prefill, prefix caching and preemption, benchmarked on Qwen3-0.6B.</p>
         </article>
         <article class="card">
           <span class="idx">03</span>
-          <p class="kicker">C++ &middot; Distributed</p>
-          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=miniRay">MiniRay</a></h3>
-          <p>A small distributed task runtime inspired by Ray: scheduling, RPC, resource
-            management, heartbeats, retries and failure recovery.</p>
+          <p class="kicker">C++20 &middot; gRPC</p>
+          <h3><a href="https://github.com/leoq77777/miniRay">MiniRay</a></h3>
+          <p>A distributed task runtime inspired by Ray: a coordinator and workers over gRPC,
+            least-loaded scheduling with backpressure, heartbeat failure detection, bounded retries
+            and deduplicated submissions.</p>
         </article>
         <article class="card">
           <span class="idx">04</span>
           <p class="kicker">C++ &middot; Networking</p>
-          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=server">Tiny Web Server</a></h3>
+          <h3>Tiny Web Server</h3>
           <p>An event-driven HTTP/1.1 server on the Reactor pattern with epoll, non-blocking
             sockets, a thread pool and asynchronous logging; 10,500 concurrent clients, zero failures.</p>
         </article>
         <article class="card">
           <span class="idx">05</span>
           <p class="kicker">Python &middot; Agents</p>
-          <h3><a href="https://github.com/leoq77777?tab=repositories&amp;q=ZQR">ZQR</a></h3>
-          <p>An agent-based quantitative research platform for exploring how language-model
-            agents can search for and test trading ideas.</p>
+          <h3><a href="https://github.com/leoq77777/ZQR">ZQR</a></h3>
+          <p>A systematic research desk for BTC and ETH spot. A coding agent proposes strategies;
+            deterministic code owns the backtests, promotion gates and paper trading.</p>
         </article>
         <article class="card">
           <span class="idx">06</span>
@@ -172,9 +173,9 @@
             through allocation-log analysis.
           </p>
           <ul class="tags">
-            <li>~12% CPU reduction</li>
-            <li>10&ndash;15% lower latency</li>
-            <li>C++ &middot; gRPC &middot; Linux</li>
+            <li>C++</li>
+            <li>gRPC</li>
+            <li>Linux</li>
           </ul>
         </article>
         <article class="post">
